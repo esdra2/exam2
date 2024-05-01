@@ -1,0 +1,666 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Exam Vault */
+      .web-title {
+        position: absolute;
+        width: 245px;
+        height: 50px;
+        left: 50px;
+        top: 0px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(
+          180deg,
+          #4c64f4 0%,
+          #46cedc 54.98%,
+          #f2debc 113.51%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      .subject-title {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 101px;
+        margin-top: 100px;
+        align-items: center;
+        text-align: center;
+        text-align: center;
+        background: linear-gradient(
+          180deg,
+          #4c64f4 0%,
+          #46cedc 54.98%,
+          #f2debc 113.51%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <template id="product-card-template">
+    <div class="product-card">
+      <h2></h2>
+      <p></p>
+    </div>
+  </template>
+  <body>
+    
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+      <a
+      href=""
+      class="flex items-center space-x-3 rtl:space-x-reverse"
+      >
+      
+      <span
+      class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white  "
+      >Exam Vault</span
+      >
+      <div>
+    </a>
+    <button
+    data-collapse-toggle="navbar-default"
+    type="button"
+    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+    aria-controls="navbar-default"
+    aria-expanded="false"
+    >
+    <span class="sr-only">Open main menu</span>
+    <svg
+    class="w-5 h-5"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 17 14"
+    >
+    <path
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    d="M1 1h15M1 7h15M1 13h15"
+    />
+  </svg>
+</button>
+<div class="hidden w-full md:block md:w-auto" id="navbar-default">
+  <ul
+  class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+  >
+  <li>
+    <a
+    href="#"
+    class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Feedback</a
+              >
+            </li>
+       
+          </ul>
+        </div>
+       
+      </div>
+      </div>
+      
+    </nav>
+          <h1 class="subject-title">Subjects</h1>
+
+     <form class="max-w-md mx-auto">
+      <label
+        for="default-search"
+        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+        >Search</label
+      >
+      <div class="relative">
+        <div
+          class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+        >
+          <svg
+            class="w-4 h-4 text-gray-500 dark:text-gray-400"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+            />
+          </svg>
+        </div>
+        <input
+        type="search"
+        id="default-search"
+        class="block w-full p-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 center "
+        placeholder="Search Books, videos ..."
+        required
+        />
+        <button
+        type="submit"
+        class="text-white absolute end-2.5 bottom-1.5 bg-blue-700 hover:bg-blue-800 focus:ring-5 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Search
+        </button>
+      </div>
+  
+    </form>
+
+    <div class="grid grid-cols-3 gap-4 p-10 cards-container">
+      <div
+        class="grid grid-cols-2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            GRADE 12
+          </h5>
+        </a>
+
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            English
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Mathematics
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Physics
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Chemistry
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Biology
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Agriculture
+          </p>
+        </div>
+        <div>
+          <p class="mb-5 font-normal text-gray-700 dark:text-gray-400">
+            Geography
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            History
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Economics
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            SAT (Math & English)
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">ICT</p>
+        </div>
+
+        <a
+          href="#"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-st text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Read more
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="grid grid-cols-2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            GRADE 11
+          </h5>
+        </a>
+
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            English
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Mathematics
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Physics
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Chemistry
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Biology
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Agriculture
+          </p>
+        </div>
+        <div>
+          <p class="mb-5 font-normal text-gray-700 dark:text-gray-400">
+            Geography
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            History
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Economics
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            SAT (Math & English)
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">ICT</p>
+        </div>
+        <a
+          href="#"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-st text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Read more
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="grid grid-cols-2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            GRADE 10
+          </h5>
+        </a>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Physics
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            English
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Biology
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Amharic
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Chemistry
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Mathematics
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">ICT</p>
+        </div>
+        <div>
+          <p class="mb-5 font-normal text-gray-700 dark:text-gray-400">
+            Geography
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            History
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Economics
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Citizenship
+          </p>
+        </div>
+
+        <a
+          href="#"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-st text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Read more
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="grid grid-cols-2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            GRADE 9
+          </h5>
+        </a>
+
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Physics
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            English
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Biology
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Amharic
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Chemistry
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Mathematics
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">ICT</p>
+        </div>
+        <div>
+          <p class="mb-5 font-normal text-gray-700 dark:text-gray-400">
+            Geography
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            History
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Economics
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Citizenship
+          </p>
+        </div>
+
+        <a
+          href="#"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-st text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Read more
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+        <div
+        class="grid grid-cols-2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            GRADE 8
+          </h5>
+        </a>
+
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Social
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            English
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Citizenship
+          </p>
+        </div>
+        <div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Amharic
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            General Science
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 font-normal text-gray-700 dark:text-gray-400">
+            Mathematics
+          </p>
+        </div>
+       
+        <a
+          href="#"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-st text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Read more
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+    </div>
+    <!-- <nav class="bg-white border-gray-200 dark:bg-gray-900 ">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href=""
+          class="flex items-center space-x-3 rtl:space-x-reverse text-white font-bold "
+        >
+         Exam Vault
+          <span
+            class="self-end text-1xl whitespace-nowrap dark:text-white ml-3 font-monospace "
+            ></span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-100 h-10"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg> -->
+       
+    <div class="product-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+          <script>
+                  // Sample product data (you can fetch this from an API or database)
+      const products = [
+        { name: "Widget A", description: "Lorem ipsum dolor sit amet." },
+        { name: "Widget B", description: "Consectetur adipiscing elit." },
+        // Add more products as needed
+      ];
+
+      // Get the product card template
+      const productCardTemplate = document.getElementById(
+        "product-card-template"
+      );
+
+      // Populate the product container with product cards
+      const productContainer = document.getElementById("product-container");
+      products.forEach((product) => {
+        const clone = document.importNode(productCardTemplate.content, true);
+        clone.querySelector("h2").textContent = product.name;
+        clone.querySelector("p").textContent = product.description;
+        productContainer.appendChild(clone);
+      });
+          </script>
+  </body>
+</html>
